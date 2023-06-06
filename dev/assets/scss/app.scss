@@ -1,0 +1,151 @@
+//fswatch -0 ./asset/scss/app.scss | xargs -0 -n 1 -I {} sass ./asset/scss/app.scss ./asset/css/app.css
+@import './uxui.scss';
+* {
+    box-sizing: border-box;
+}
+div {
+    &:after { 
+        content:' ';  
+        clear: both; 
+    } 
+     
+} 
+.crawler {
+    padding-right: 15px;
+    font-size:13pt !important;
+	line-height:1.68 !important;	
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+	position:relative;
+	margin:0; 
+} 
+.spider { 
+    &__content {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .column {
+        padding: 15px;
+        background-color: white;
+        box-shadow: 1px 1px 2px gray;
+        height: auto;
+        
+    }
+    &__left {
+        width: 40%;
+        margin-right: 30px ;
+        display: inline-block;
+        
+    }
+    &__right {
+        width: 60%;
+        display: inline-block;
+    }
+    
+}
+.form {
+    &__group {        
+        margin-bottom: 15px;      
+    }
+    &__item {
+        display: block;
+        margin-bottom: 7.5px;
+    }
+    &__note {
+        font-size: 12px;
+        font-style: italic;
+        text-align: right;
+    }
+    &__btn {
+        padding: 5px 7.5px;
+        font-size: 13px;
+        cursor: pointer;
+        font-weight: bold; 
+    }
+
+    &__container {
+        padding-left: 30px;
+    }
+    
+}
+.wd-100 {
+    width: 100%;
+}
+.subcontainer {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 15px;
+    .form__group {
+        margin-bottom: 5px;
+    }
+    .form__label {
+        float: left;
+    }
+    
+}
+
+.remove-container {  
+    cursor: pointer;    
+    margin-top: 6px;
+    float: right;
+    color:rgb(0, 115, 255);
+    &:hover {
+        color:rgb(0, 61, 135);
+    }
+    
+}
+
+.remove-attribute {    
+    cursor: pointer;    
+    margin-top: 6px;    
+    color:rgb(0, 115, 255);
+    &:hover {
+        color:rgb(0, 61, 135);
+    }
+}
+.attribute {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    
+}
+.border {
+    &__bottom {
+        padding-bottom: 15px;
+        border-bottom: 1px solid #ccc;
+    }
+}
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    button {
+        width: 50%;
+        &:first-child {
+            margin-right: 15px;
+        }
+        &:last-child {
+            margin-left: 15px;
+        }
+    } 
+}
+.singleform {
+    width: 600px;  
+    .form__item { 
+        padding: 5px;
+        font-size: 16px; 
+    }
+    &__btn {
+        text-align: right;
+    }
+} 
+.add__container { 
+    &.disable {
+        color:grey;
+        pointer-events:none;
+        
+    }
+}
+//---- 
